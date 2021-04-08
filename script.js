@@ -1,4 +1,4 @@
-date = moment().format("MMMM Do YYYY");
+date = moment().format("MMMM Do YYYY - h:mm a");
 console.log(date);
 
 $("#currentDay").text(date);
