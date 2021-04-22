@@ -11,7 +11,6 @@ $(document).ready(function () {
     console.log(event);
     // whenever there is
     // stop refresh from not working
-    console.log("hello");
 
     let textAreaValue = $(this).siblings(".description").val();
     console.log(textAreaValue);
@@ -22,6 +21,7 @@ $(document).ready(function () {
     console.log(time);
 
     localStorage.setItem(time, textAreaValue);
+    // Need to give a Key and a Value
   });
 
   for (let i = 9; i < 18; i++) {
@@ -29,7 +29,14 @@ $(document).ready(function () {
 
     //   var id = `#hour-${i}`
     var textArea = $(id + " .description");
-    textArea.val(localStorage.getItem(id));
+    let localStorageString = `hour-${i}`
+    // removing the # as this throws it off
+    textArea.val(localStorage.getItem(localStorageString));
+    // NOT BRINGING THROUGH GETITEM
+    console.log(textArea)
+    // Anything in local storage is a string!
+    // 
+
   }
   //   local storage for each hour section
 
